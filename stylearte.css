@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sec
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #171a23;
+    background:url("img/banners.jpg");
+    background-position: center;
+    background-size: 2000px;
+}
+
+.custom-shape-divider-bottom-1619154116 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1619154116 svg {
+    position: relative;
+    display: block;
+    width: calc(121% + 1.3px);
+    height: 177px;
+}
+
+.custom-shape-divider-bottom-1619154116 .shape-fill {
+    fill: #ffff;
+}
+
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*z-index: 1000;*/
+}
+header .logo
+{
+    position: relative;
+    max-width: 200px;
+    opacity: 0;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes slide_left
+{
+    0%
+    {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+header ul
+{
+    position: relative;
+    display: flex;
+}
+header .navigation li
+{
+    list-style: none;
+}
+header .navigation li a
+{
+    display: inline-block;
+    color: #fff;
+    margin-right: 40px;
+    text-decoration: none;
+}
+header ul li a.active
+{
+   
+    color:rgb(204, 0, 0);
+    
+}
+header .navigation li a:hover
+{
+    color: rgb(194, 9, 9);
+}
+
+section
+{
+    padding: 100px;
+}
+
+.row
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50
+{
+    position: relative;
+    max-width: 48%;
+}
+
+.titleText
+{
+    color: #ff0157;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+.texto
+{
+    font-family: 'Poppins';
+    color: #ffffff;
+    font-size: 5em;
+    font-weight: bold;
+    
+
+}
+.col50 img /*Imagen logo*/
+{
+    max-width: 30%;
+
+}
+.col60 img/*Imagen aikido profesor*/
+{
+    max-width: 100%;
+}
+
+
+/* AIKIDO BENEFICIOS*/
+
+
+.row .col70 /*Texto*/
+{
+    position: relative;
+    max-width: 50%;
+}
+
+.row .col80
+{
+    position: relative;
+    max-width: 50%;
+}
+
+.row .col80 img/*Imagen personas salud*/
+{
+    max-width: 70%;
+}
+
+/*Hagamos esto Responsive*/
+
+@media(max-width: 991px)
+{
+    section
+    {
+        padding: 150px 20px;
+    }
+
+    header
+    {
+        padding: 20px;
+    }
+
+    .navigation
+    {
+        display: none;
+    }
+
+    .navigation.active
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(20, 20, 20);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header ul li
+    {
+        margin: 10px;
+    }
+
+    header ul li a
+    {
+        font-size: 2.3em;
+    }
+
+    /* Boton de Menu */
+    .toggle
+    {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+        background: rgb(194, 9, 9) url(img/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 1000;
+        border-radius: 20px;
+    }
+    /* Boton de Cerrar*/
+    .toggle.active
+    {
+        background: rgb(194, 9, 9) url(img/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center; 
+        
+    }
+}

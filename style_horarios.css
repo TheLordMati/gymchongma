@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #171a23;
+}
+
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*z-index: 1000;*/
+}
+header .logo
+{
+    position: relative;
+    max-width: 200px;
+    opacity: 0;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes slide_left
+{
+    0%
+    {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+header ul
+{
+    position: relative;
+    display: flex;
+}
+header .navigation li
+{
+    list-style: none;
+}
+header .navigation li a
+{
+    display: inline-block;
+    color: #fff;
+    margin-right: 40px;
+    text-decoration: none;
+}
+header ul li a.active
+{
+   
+    color:rgb(204, 0, 0);
+    
+}
+header .navigation li a:hover
+{
+    color: rgb(194, 9, 9);
+}
+
+.contenedor
+{
+  
+    border-radius: 60px;
+    box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2), -8px -8px 18px 0 rgba(29, 34, 48, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+    width: 100%;
+    position: relative;
+
+    
+}
+.contenedor.horario
+{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    padding: 1em;
+    margin: 30px;
+
+}
+
+/*Hagamos esto Responsive*/
+
+@media(max-width: 991px)
+{
+    section
+    {
+        padding: 150px 20px;
+    }
+
+    header
+    {
+        padding: 20px;
+    }
+
+    .navigation
+    {
+        display: none;
+    }
+
+    .navigation.active
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(20, 20, 20);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header ul li
+    {
+        margin: 10px;
+    }
+
+    header ul li a
+    {
+        font-size: 2.3em;
+    }
+
+    /* Boton de Menu */
+    .toggle
+    {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+        background: rgb(194, 9, 9) url(img/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 1000;
+        border-radius: 20px;
+    }
+    /* Boton de Cerrar*/
+    .toggle.active
+    {
+        background: rgb(194, 9, 9) url(img/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+}

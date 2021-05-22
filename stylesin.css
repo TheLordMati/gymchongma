@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+section
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(255, 255, 255);
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+header .logo
+{
+    position: relative;
+    max-width: 200px;
+    opacity: 0;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes slide_left
+{
+    0%
+    {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+header ul
+{
+    position: relative;
+    display: flex;
+}
+
+header ul li
+{
+    list-style: none;
+}
+
+header ul li a
+{
+    
+    display: inline-block;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-left: 40px;
+    padding: 8px 18px;
+    text-decoration: none;
+    user-select: none;
+    opacity: 0;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes slide_top
+{
+    0%
+    {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+header ul li a.active,
+header ul li a:hover
+{
+    background: #dd1d50;
+    color: #fff;
+    border-radius: 30px;
+}
+
+.content
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textBox
+{
+    position: relative;
+    max-width: 800px;
+}
+
+.content .textBox h2
+{
+    color: #333;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.content .textBox h2 span
+{
+    color: #ca002c;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.content .textBox p
+{
+    color: #333;
+}
+
+.content .textBox a
+{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #ca002c;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    opacity: 0;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: 2s;
+}
+
+.content .imgBox
+{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.content .imgBox img
+{
+    max-width: 480px;
+}
+
+.thumb
+{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.thumb li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.thumb li:hover
+{
+    transform: translateY(-15%);
+}
+
+.thumb li img
+{
+    max-width: 200px;
+}
+
+
+
+
+
+.icon
+{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    bottom: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icon li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.icon li a
+{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter: invert(1);
+}
+/* Movimiento de iconos de redes sociales */
+.icon li:hover
+{
+    transform: translateX(-15%);
+}
+/* Tamaño de iconos de redes sociales */
+.icon li img
+{
+    max-width: 50px;
+}
+/*Fondo blanco de los productos*/
+.product
+{
+    width: 85%;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 30px rgba(167,158,245,0.2);
+    display: flex;
+    margin: 30px auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin-top: -40%;
+    position: relative;
+    background-image: url("poduct bg.png");
+    background-size: 750px;
+    background-position: center;
+    border-radius: 20px;
+}
+/*Fuente de NOVEDADES*/
+.p-heading font
+{
+    font-family: poppins;
+    color:#d42554;
+    font-weight: 700;
+    font-size: 2rem;
+    text-shadow: 2px 2px 30px rgba(167,158,245,0.2);
+}
+/*NOVEDADES*/
+.p-heading h3
+{
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 2rem;
+    text-shadow: 2px 2px 30px rgba(167,158,245,0.2);
+}
+
+.product-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+    width: 100%;
+    
+
+}
+/*Recuadro de cada objeto*/
+.p-box
+{
+    width: 250px;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;
+    margin: 10px 30px;
+}
+/*Imagen de paquete de yerba*/
+.p-box img
+{
+    height: 190px;
+
+}
+
+/*Yerba Mate La Merced De Campo Oc 1/2 Kg*/
+.p-box p
+{
+    color: #2b2b2b70;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    
+    
+}
+
+/*$228*/
+.price
+{
+    color:#2c2c2c;
+    font-family: poppins;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.buy-btn
+{
+    position: absolute;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: calibri;
+    left:50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    color: #FFFFFF;
+    background: linear-gradient( 109.6deg,  rgba(254,87,98,1) 11.2%, rgba(255,107,161,1) 99.1% );
+    text-decoration: none;
+    display: none;
+    animation: fade 0.3s;
+}
+
+.p-box:hover
+{
+    box-shadow: 2px 2px 30px rgba(167,158,245,0.2);
+    background-color: #FFFFFF;
+}
+
+.p-box:hover .price
+{
+    color:#cf3959;
+    transition: all ease 0.2s;
+}
+
+.p-box:hover .buy-btn
+{
+    display: flex;
+}
+@keyframes fade
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+/*Hagamos esto Responsive*/
+
+@media(max-width: 991px)
+{
+    section
+    {
+        padding: 150px 20px;
+    }
+
+    header
+    {
+        padding: 20px;
+    }
+
+    .navigation
+    {
+        display: none;
+    }
+
+    .navigation.active
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header ul li
+    {
+        margin: 10px;
+    }
+
+    header ul li a
+    {
+        font-size: 2.3em;
+    }
+
+    /* Boton de Menu */
+    .toggle
+    {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+        background: #dd1d50 url(menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 1000;
+        border-radius: 20px;
+    }
+    /* Boton de Cerrar*/
+    .toggle.active
+    {
+        background: #dd1d50 url(close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+
+    .imgBox .yerbas
+    {
+        max-width: 240px 286px;
+    }
+
+    .content .textBox h2
+    {
+        font-size: 2.5em;
+    }
+
+    .product
+    {
+        margin-top: -170%;
+    }
+
+    .thumb
+    {
+        bottom: 290px;
+    }
+
+}
+
+@media(max-width: 400px)
+{
+    .imgBox .yerbas
+    {
+        max-width: 120px 143px;
+    }
+    .circle
+    {
+        opacity: 0.6;
+    }
+    .product
+    {
+        margin-top: -105%;
+    }
+}

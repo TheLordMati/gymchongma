@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio Chong-ma</title>
+    <link rel="shortcut icon" href="img/yingyang.png">
+    <link rel="stylesheet" href="style_horarios.css">
+</head>
+<link rel="stylesheet" href="stile_contacto.css">
+<body>
+   
+        <div class="container">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/call.png">
+                </div>
+                <div class="content">
+                    <div class="icono">
+                        <img src="img/call.png">
+                    </div>
+                    <h3>Número de Telefono</h3>
+                    <h4>+34 971 202 015</h4>
+                    <h5>+34 717 702 143</h5>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/open-email.png">
+                </div>
+                <div class="content">
+                    <div class="icono">
+                        <img src="img/open-email.png">
+                    </div>
+                    <h3>Email</h3>
+                    <h4>info@gymchongma.com</h4>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/map.png">
+                </div>
+                <div class="content">
+                    <div class="icono">
+                        <img src="img/map.png">
+                    </div>
+                    <h3>Dirección</h3>
+                    <h4>Carrer Sant Joaquim, 20 (9.674,25 km)</h4>
+                    <h5>-07010 Palma, España-</h5>
+                </div>
+            </div>
+        </div>
+        <header>
+
+            <!--Encabezado Inicio/Menu/Novedades/Contacto-->
+
+            <!--Logo en la pagina-->
+            <a href="index.html"><img src="img/Artemarciallogo.png" class="logo"></a>
+            <div class="toggle"></div>
+            <ul class="navigation">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="artes.html">Artes Marciales</a></li>
+                <li><a href="horarios.html">Horarios</a></li>
+                    <li><a href=" Contacto.html" class="active" >Contacto</a></li>
+            </ul>
+        </header>
+        
+        <script>
+            const menuToggle = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.onclick = function(){
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+</body>
+</html>

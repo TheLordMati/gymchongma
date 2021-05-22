@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio Chong-ma</title>
+    <link rel="shortcut icon" href="img/yingyang.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <header>
+
+            <!--Encabezado Inicio/Menu/Novedades/Contacto-->
+
+            <!--Logo en la pagina-->
+            <a href="index.html"><img src="img/Artemarciallogo.png" class="logo"></a>
+            <div class="toggle"></div>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="artes.html">Artes Marciales</a></li>
+                <li><a href="horarios.html" >Horarios</a></li>
+                <li><a href=" Contacto.html">Contacto</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="contentBx">
+                <!--texto principal-->
+                <h2>GIMNASIO CHONG-MA</h2>
+                <p>Nuestro mayor logro no son los títulos y trofeos que pueblan nuestra historia, sino el haber logrado
+                    hacer de nuestro centro un espacio en el que todo el mundo tiene cabida, sea cual sea el objetivo:
+                    competir, ganar salud, conocer gente, aprender a defenderse o simplemente pasarlo bien.</p>
+                <!--Boton de Saber Más-->
+                <a href="Contacto.html">Comenzar</a>
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/GimnasioChongMa/"><img src="img/facebook.png"></a></li>
+            <li><a href=""><img src="img/instagram.png"></a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=34717702143"><img src="img/whatsapp.png"></a></li>
+        </ul>
+    </section>
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>

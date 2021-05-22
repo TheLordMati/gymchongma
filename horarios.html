@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio Chong-ma</title>
+    <link rel="shortcut icon" href="img/yingyang.png">
+    <link rel="stylesheet" href="style_horarios.css">
+</head>
+
+<body>
+    <section>
+
+        <div class="contenedor">
+            <img src="img/horarios.png" class="horario">
+            <img src="img/horariostaekwondo.png" class="horario">
+            <img src="img/horarioskick.png" class="horario">
+            <img src="img/horariosthai.png" class="horario">
+            <img src="img/horariosbox.png" class="horario">
+            <img src="img/horariospoli.png" class="horario">
+            <img src="img/horariosmma.png" class="horario">
+            
+        </div>
+        <header>
+
+            <!--Encabezado Inicio/Menu/Novedades/Contacto-->
+
+            <!--Logo en la pagina-->
+            <a href="index.html"><img src="img/Artemarciallogo.png" class="logo"></a>
+            <div class="toggle"></div>
+            <ul class="navigation">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="artes.html">Artes Marciales</a></li>
+                <li><a href="horarios.html" class="active" >Horarios</a></li>
+                    <li><a href=" Contacto.html">Contacto</a></li>
+            </ul>
+        </header>
+    </section>
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
