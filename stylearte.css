@@ -17,7 +17,7 @@
     justify-content: space-between;
     align-items: center;
     background: #171a23;
-    background:url("img/banners.jpg");
+    background:url("img/banners.svg");
     background-position: center;
     background-size: 2000px;
 }
